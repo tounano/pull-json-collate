@@ -33,7 +33,7 @@ pull(
 With [npm](https://npmjs.org) do:
 
 ```
-npm install pull-cartesian
+npm install pull-json-collate
 ```
 
 ## license
