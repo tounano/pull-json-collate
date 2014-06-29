@@ -1,0 +1,1 @@
+module.exports = require("./json-collate-stream");
