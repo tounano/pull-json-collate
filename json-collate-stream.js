@@ -6,11 +6,15 @@ module.exports = pull.Through( function (read) {
   var ended = false;
   return function next (end, cb) {
     if (ended) return cb(ended);
-    if (end === true) {ended = true; return cb(null, obj)};
-    if (end) return cb(end);
 
     read(end, function (end, data) {
-      if (end) return next(end, cb);
+      if (end) {
+        ended = end;
+        cb(null, obj);
+        obj = {};
+        return;
+      }
+
       obj = _.extend(obj, data);
       next(end, cb);
     })

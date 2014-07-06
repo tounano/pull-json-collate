@@ -1,6 +1,6 @@
 {
   "name": "pull-json-collate",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "./json-collate-stream.js",
   "description": "Collate json objects and send them downstream.",
   "homepage": "https://github.com/tounano/pull-json-collate/",
